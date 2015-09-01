@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SignUp.aspx.cs" Inherits="SignUp" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -49,7 +51,13 @@
         <div class="center-page">
             <label class="col-xs-11">Name</label>
             <div class="col-xs-11">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:TextBox ID="name" CssClass="form-control" placeholder="Name" runat="server"></asp:TextBox>
+                <asp:Panel ID="Panel1" runat="server" >
+                    <b>Enter your real name for contacting you</b>
+                    <br />
+                </asp:Panel>
+                <ajaxToolkit:BalloonPopupExtender ID="name_BalloonPopupExtender" runat="server" BalloonPopupControlID="Panel1" BehaviorID="name_BalloonPopupExtender" CustomCssUrl="" DynamicServicePath="" ExtenderControlID="" TargetControlID="name" BalloonStyle="Cloud" BalloonSize="Medium"></ajaxToolkit:BalloonPopupExtender>
             </div>
 
             <label class="col-xs-11">Email Id</label>
@@ -71,7 +79,7 @@
             </div>
             <div class="col-xs-11 space-vert">
                 <asp:Button ID="signup" CssClass="btn btn-success" runat="server" Text="Sign Up" />
-             </div>
+            </div>
         </div>
 
         <hr />
