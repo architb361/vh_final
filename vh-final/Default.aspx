@@ -27,14 +27,13 @@
             <div class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nabar-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="Default.aspx"><span>
-                            <img alt="Logo" src="Images/dota-2-official.jpg" height="30" /></span>Virtual Highs</a>
+                        <a class="navbar-brand" href="Default.aspx"><span><img alt="Logo" src="Images/dota-2-official.jpg" height="30" /></span>Virtual Highs</a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -42,7 +41,7 @@
                             <li><a href="#">Games</a></li>
                             <li><a href="#">Gallery</a></li>
                             <li><a href="#">Events</a></li>
-                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="SignUp.aspx">Sign Up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -250,7 +249,7 @@
         <footer>
             <div class="container">
                 <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="#">Regiester</a></p>
+                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
                 <p>Website developed by Archit Bhatnagar</p>
             </div>
         </footer>
