@@ -33,16 +33,46 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="Default.aspx"><span><img alt="Logo" src="Images/dota-2-official.jpg" height="30" /></span>Virtual Highs</a>
+                        <a class="navbar-brand" href="Default.aspx"><span>
+                            <img alt="Logo" src="Images/dota-2-official.jpg" height="30" /></span>Virtual Highs</a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="Default.aspx">Home</a></li>
-                            <li><a href="#">Games</a></li>
+                            <li><a href="Games.aspx">Games</a></li>
                             <li><a href="#">Gallery</a></li>
                             <li><a href="#">Events</a></li>
                             <li><a href="SignUp.aspx">Sign Up</a></li>
+                            <li><a href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Log-in</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <asp:TextBox ID="emailid" CssClass="form-control" placeholder="Enter email" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <asp:TextBox ID="password" CssClass="form-control" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
+                        </div>
+                        <p class="text-right"><a href="#">Forgot password?</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn">Close</a>
+                        <asp:Button CssClass="btn btn-primary" ID="login" runat="server" Text="Log-in" OnClick="login_Click" />
                     </div>
                 </div>
             </div>
@@ -105,11 +135,11 @@
 
         <h1 class="center">Grand opening on 25th OCTOBER</h1>
         <div class="center">
-            <p>Book now to enjoy the whole new feel of gamming</p>
-            <asp:Button ID="Book" CssClass="btn btn-success" runat="server" Text="Book now" />
+            <p>Book now to enjoy the whole new feel to gaming</p>
+            <asp:Button ID="Book" CssClass="btn-lg btn-success" runat="server" Text="Book now" />
         </div>
         <!-- New Releases -->
-        <h2 class="center">Most Popular Played</h2>
+        <h2 class="center">New Releases</h2>
         <br />
 
 

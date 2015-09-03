@@ -27,10 +27,17 @@
     height:auto;
     position:absolute;
 
-    top:700px;
+    top:800px;
     bottom:0;
     left:0;
     right:0;
     
     margin:auto;
+}
+.background-imageabc 
+{
+   
+    background-image: url('../Images/modal-warframe.jpg');
+    background-position:center;
+    
 }
