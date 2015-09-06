@@ -147,7 +147,7 @@
                     <div class="col col-lg-4">
                         <img class="img-thumbnail" src="Images/modal-gta5.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
                         <h3>Grand Theft Auto V</h3>
-                        <h4>Available for PC</h4>
+                        <h4>Available for PC, PS4</h4>
                         <p>Grand Theft Auto V is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games.The game is the first main entry in the Grand Theft Auto series since 2008's. Set within the fictional state of San Andreas, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency</p>
                         <p>
                             <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-gta5">Read More &raquo;</button>
@@ -269,42 +269,46 @@
 
 
                     <div class="col col-lg-4">
-                        <img class="img-thumbnail" src="Images/modal-gta5.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
-                        <h3>Grand Theft Auto V</h3>
-                        <h4>Available for PC</h4>
-                        <p>Grand Theft Auto V is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games.The game is the first main entry in the Grand Theft Auto series since 2008's. Set within the fictional state of San Andreas, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency</p>
-                        <p>
-                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-gta5">Read More &raquo;</button>
-                        </p>
-                        <!-- Modal -->
-                        <div id="Modal-gta5" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
+                    <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                    <h3>Fifa-16</h3>
+                    <h4>Available for PS3, Xbox, PS4</h4>
+                    <p>
+                        FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote including the first women to appear on cover</p>
+                    <p>
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-Fifa-16">Read More &raquo;</button>
+                    </p>
+                    <!-- Modal -->
+                    <div id="Modal-Fifa-16" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Grand Theft Auto V</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>
-                                            <img class="img-thumbnail" src="Images/modal-gta5.jpg" width="768" height="432" />
-                                        </p>
-                                        <br />
-                                        <p>Grand Theft Auto V is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games. It was released on 17 September 2013 for the PlayStation 3 and Xbox 360, on 18 November 2014 for the PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows. The game is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV. Set within the fictional state of San Andreas (based on Southern California), the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency. The open world design lets players freely roam San Andreas, which includes open countryside and the fictional city of Los Santos (based on Los Angeles).</p>
-                                        <p>The game is played from either a third-person or first-person view[c] and its world is navigated on foot or by vehicle. Players control the three lead protagonists throughout the single-player mode, switching between them both during and outside of missions. The story is centred on the heist sequences, and many of the missions involve shooting and driving gameplay. Players who commit crimes may incite a response from law enforcement agencies, measured by a "wanted" system that governs the aggression of their response. Grand Theft Auto Online, the online multiplayer mode, lets up to 30 players explore the open world and engage in cooperative or competitive game matches.</p>
-                                        <h3>Grand Theft Auto Online</h3>
-                                        <p>Developed in tandem with the single-player mode, the online multiplayer mode Grand Theft Auto Online was conceived as a separate experience to be played in a continually evolving world.[145] Up to 30 players[p] freely roam across a re-creation of the single-player world and enter lobbies to complete jobs (story-driven competitive and cooperative modes).[146] The Content Creator toolset lets players create their own parameters for custom jobs, like racetracks and deathmatch weapon spawn points.[148] Players may band together in organised player teams called crews to complete jobs together. Rockstar Games Social Club extends crews formed in Max Payne 3‍‍ '​‍s multiplayer mode to that of Grand Theft Auto Online. Players can create their own crews and join up to five total. Crews win multiplayer matches to earn experience points and climb online leaderboards.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Fifa-16</h4>
                                 </div>
-
+                                <div class="modal-body">
+                                    <p>
+                                        <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
+                                    </p>
+                                    <br />
+                                    <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover,including the first women to appear.</p>
+                                    <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
+                                    <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
+                                    <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
+                                    <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
+                                    <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
+                                    <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
+
+                </div>
 
                 </div>
             </div>

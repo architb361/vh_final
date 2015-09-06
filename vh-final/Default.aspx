@@ -63,16 +63,19 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <asp:TextBox ID="emailid" CssClass="form-control" placeholder="Enter email" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Id Required" ControlToValidate="emailid" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <asp:TextBox ID="password" CssClass="form-control" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ControlToValidate="password" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
+                            
                         </div>
                         <p class="text-right"><a href="#">Forgot password?</a></p>
                     </div>
                     <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn">Close</a>
-                        <asp:Button CssClass="btn btn-primary" ID="login" runat="server" Text="Log-in" OnClick="login_Click" />
+                        <asp:Button CssClass="btn btn-primary" ID="login" runat="server" Text="Log-in" OnClick="login_Click" ValidationGroup="log-in" />
                     </div>
                 </div>
             </div>
@@ -136,7 +139,7 @@
         <h1 class="center">Grand opening on 25th OCTOBER</h1>
         <div class="center">
             <p>Book now to enjoy the whole new feel to gaming</p>
-            <asp:Button ID="Book" CssClass="btn-lg btn-success" runat="server" Text="Book now" />
+            <asp:Button ID="Book" CssClass="btn-lg btn-success" runat="server" Text="Book now" OnClick="Book_Click" />
         </div>
         <!-- New Releases -->
         <h2 class="center">New Releases</h2>
@@ -147,41 +150,36 @@
             <div class="row">
 
                 <div class="col col-lg-4">
-                    <img class="img-thumbnail" src="Images/modal-Counter_Strike_Global_Offensive.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
-                    <h3>Counter Strike:Global Offensive</h3>
+                    <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                    <h3>Fifa-16</h3>
+                    <h4>Available for PS3, Xbox, PS4</h4>
                     <p>
-                        Counter-Strike: Global Offensive (CS: GO) will expand upon the team-based action gameplay that it pioneered when it was launched 14 years ago. CS: GO features new maps, characters, and weapons and delivers updated versions of the classic CS content (de_dust, etc.). In addition, CS: GO will introduce new gameplay modes, matchmaking, leader boards, and more.
-                    </p>
+                        FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on cover</p>
                     <p>
-                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-CSGO">Read More &raquo;</button>
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-Fifa-16">Read More &raquo;</button>
                     </p>
                     <!-- Modal -->
-                    <div id="Modal-CSGO" class="modal fade" role="dialog">
+                    <div id="Modal-Fifa-16" class="modal fade" role="dialog">
                         <div class="modal-dialog">
 
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Counter Strike:Global Offensive</h4>
+                                    <h4 class="modal-title">Fifa-16</h4>
                                 </div>
                                 <div class="modal-body">
                                     <p>
-                                        <img class="img-thumbnail" src="Images/modal-Counter_Strike_Global_Offensive.jpg" width="768" height="432" />
+                                        <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
                                     </p>
                                     <br />
-                                    <p>Counter-Strike: Global Offensive (CS:GO) expands upon the team-based action gameplay that the franchise pioneered when it was launched 12 years ago. CS:GO features new maps, characters, and weapons and delivers updated versions of the classic CS content (de_dust, etc.). In addition, CS:GO introduces new gameplay modes, matchmaking, leader boards, and more.</p>
-                                    <h3>Game Modes</h3>
-                                    <h4>Classic: Competitive</h4>
-                                    <p>This is the classic gameplay that made Counter-Strike famous. Queue up and join a 5v5 best-of-30 match using standard competitive Counter-Strike rules on one of the classic maps. You can join a match on your own, or form a team and enter a match as a unit.</p>
-                                    <h4>Classic: Casual</h4>
-                                    <p>Ready to play some Counter-Strike, but don’t want to commit to a full match? Find a casual match and play at your own pace. In Casual mode, players automatically receive body armor and defusal kits and gain bonus rewards for kills.</p>
-                                    <h4>Demolition</h4>
-                                    <p>In demolition mode, players take turns attacking and defending a single bombsite in a series of maps designed for fast-paced gameplay. Players are automatically granted a starting weapon, and advance through a sequence of firearms when they register a kill. If you’re up to the challenge, you can try to register a kill each round and reach the ultimate weapons, powerful sniper rifles!</p>
-                                    <h4>Arms Race</h4>
-                                    <p>Arms race is a gun-progression mode featuring instant respawning and a ton of close-quarter combat. Players gain new weapons immediately after registering a kill as they work their way through each weapon in the game. Get a kill with the final weapon, a golden knife, and win the match.</p>
-                                    <h3>History</h3>
-                                    <p>In 1999 Counter-Strike was released as a mod for Half-Life. As Counter-Strike progressed from a beta to a full release, it refined the classic gameplay that has come to define competitive shooters and produced a dedicated community that has followed the game for over a decade.Through each of its iterations – 1.6, Source, and Global Offensive – Counter-Strike has been the de facto benchmark of a player’s skill. Teams from around the world are constantly demonstrating their ability and strategies in local, regional, and international tournaments.</p>
+                                    <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover.</p>
+                                    <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
+                                    <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
+                                    <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
+                                    <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
+                                    <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
+                                    <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

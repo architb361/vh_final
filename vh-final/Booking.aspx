@@ -48,6 +48,14 @@
                 </div>
             </div>
         </div>
+         <hr />
+        <footer class="footer-pos">
+            <div class="container">
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
+                <p>Website developed by Archit Bhatnagar</p>
+            </div>
+        </footer>
 
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
