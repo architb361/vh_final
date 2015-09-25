@@ -59,6 +59,8 @@
             <br />
             <asp:RadioButton ID="PC1" runat="server" AutoPostBack="True" GroupName="PCS" OnCheckedChanged="PC1_CheckedChanged" Text="1PC" Visible="False" />
             <asp:RadioButton ID="PC_more" runat="server" AutoPostBack="True" GroupName="PCS" OnCheckedChanged="PC_more_CheckedChanged" Text="More" Visible="False" />
+            <asp:RadioButton ID="OneController" GroupName="controller"  runat="server" AutoPostBack="True" OnCheckedChanged="OneController_CheckedChanged" Text="1 Controller" Visible="False" />
+            <asp:RadioButton ID="morethan1" GroupName="controller" runat="server" AutoPostBack="True" OnCheckedChanged="morethan1_CheckedChanged" Text="More" Visible="False" />
             <br />
             <asp:DropDownList ID="no_of_pcs" runat="server" AutoPostBack="True" OnSelectedIndexChanged="no_of_pcs_SelectedIndexChanged" Visible="False">
                 <asp:ListItem>1</asp:ListItem>
@@ -72,70 +74,67 @@
                 <asp:ListItem>9</asp:ListItem>
                 <asp:ListItem>10</asp:ListItem>
             </asp:DropDownList>
+            <asp:DropDownList ID="no_of_controllers" runat="server" AutoPostBack="True" OnSelectedIndexChanged="no_of_controllers_SelectedIndexChanged" Visible="False">
+                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem>2</asp:ListItem>
+                <asp:ListItem>3</asp:ListItem>
+                <asp:ListItem>4</asp:ListItem>
+            </asp:DropDownList>
 
             <br />
 
-
-
-
-
-
-
-
-
             <div>
-                <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="True" Text="9:30-10:00 am" Visible="False"   />
-                <br />
-                <asp:CheckBox ID="CheckBox2" runat="server" AutoPostBack="True" Text="10:00-10:30 am" Visible="False"  />
-                <br />
-                <asp:CheckBox ID="CheckBox3" runat="server" AutoPostBack="True" Text="10:30-11:00 am" Visible="False"   />
-                <br />
-                <asp:CheckBox ID="CheckBox4" runat="server" AutoPostBack="True" Text="11:00-11:30 am" Visible="False"   />
-                <br />
-                <asp:CheckBox ID="CheckBox5" runat="server" AutoPostBack="True" Text="11:30-12:00 am" Visible="False"   />
-                <br />
-                <asp:CheckBox ID="CheckBox6" runat="server" AutoPostBack="True" Text="12:00-12:30 am" Visible="False"  />
-                <br />
-                <asp:CheckBox ID="CheckBox7" runat="server" AutoPostBack="True" Text="12:30-1:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox8" runat="server" AutoPostBack="True" Text="1:00-1:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox9" runat="server" AutoPostBack="True" Text="1:30-2:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox10" runat="server" AutoPostBack="True" Text="2:00-2:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox11" runat="server" AutoPostBack="True" Text="2:30-3:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox12" runat="server" AutoPostBack="True" Text="3:00-3:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox13" runat="server" AutoPostBack="True" Text="3:30-4:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox14" runat="server" AutoPostBack="True" Text="4:00-4:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox15" runat="server" AutoPostBack="True" Text="4:30-5:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox16" runat="server" AutoPostBack="True" Text="5:00-5:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox17" runat="server" AutoPostBack="True" Text="5:30-6:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox18" runat="server" AutoPostBack="True" Text="6:00-6:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox19" runat="server" AutoPostBack="True" Text="6:30-7:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox20" runat="server" AutoPostBack="True" Text="7:00-7:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox21" runat="server" AutoPostBack="True" Text="7:30-8:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox22" runat="server" AutoPostBack="True" Text="8:00-8:30 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox23" runat="server" AutoPostBack="True" Text="8:30-9:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox24" runat="server" AutoPostBack="True" Text="9:00-9:30 am" Visible="False" />
-                <br />
-
-                <asp:CheckBox ID="CheckBox25" runat="server" AutoPostBack="True" Text="9:30-10:00 am" Visible="False" />
-                <br />
-                <asp:CheckBox ID="CheckBox26" runat="server" AutoPostBack="True" Text="10:00-10:30 am" Visible="False" />
+                <p><asp:CheckBox ID="CheckBox1" runat="server"  Text="9:30-10:00 am" Visible="False"   /></p>
+                
+                <p><asp:CheckBox ID="CheckBox2" runat="server"  Text="10:00-10:30 am" Visible="False"  /></p>
+                
+                <p><asp:CheckBox ID="CheckBox3" runat="server" Text="10:30-11:00 am" Visible="False"   /></p>
+          
+                <p><asp:CheckBox ID="CheckBox4" runat="server" AutoPostBack="False" Text="11:00-11:30 am" Visible="False"   /></p>
+                
+                <p><asp:CheckBox ID="CheckBox5" runat="server" AutoPostBack="False" Text="11:30-12:00 am" Visible="False"   /></p>
+                
+                <p><asp:CheckBox ID="CheckBox6" runat="server" AutoPostBack="False" Text="12:00-12:30 pm" Visible="False"  /></p>
+                
+                <p><asp:CheckBox ID="CheckBox7" runat="server" AutoPostBack="False" Text="12:30-1:00 pm" Visible="False" /></p>
+               
+                <p><asp:CheckBox ID="CheckBox8" runat="server" AutoPostBack="False" Text="1:00-1:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox9" runat="server" AutoPostBack="False" Text="1:30-2:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox10" runat="server" AutoPostBack="False" Text="2:00-2:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox11" runat="server" AutoPostBack="False" Text="2:30-3:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox12" runat="server" AutoPostBack="False" Text="3:00-3:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox13" runat="server" AutoPostBack="False" Text="3:30-4:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox14" runat="server" AutoPostBack="False" Text="4:00-4:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox15" runat="server" AutoPostBack="False" Text="4:30-5:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox16" runat="server" AutoPostBack="False" Text="5:00-5:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox17" runat="server" AutoPostBack="False" Text="5:30-6:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox18" runat="server" AutoPostBack="False" Text="6:00-6:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox19" runat="server" AutoPostBack="False" Text="6:30-7:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox20" runat="server" AutoPostBack="False" Text="7:00-7:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox21" runat="server" AutoPostBack="False" Text="7:30-8:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox22" runat="server" AutoPostBack="False" Text="8:00-8:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox23" runat="server" AutoPostBack="False" Text="8:30-9:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox24" runat="server" AutoPostBack="False" Text="9:00-9:30 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox25" runat="server" AutoPostBack="False" Text="9:30-10:00 pm" Visible="False" /></p>
+                
+                <p><asp:CheckBox ID="CheckBox26" runat="server" AutoPostBack="False" Text="10:00-10:30 pm" Visible="False" /></p>
                 <br />
                 <asp:Button ID="pc_booking" runat="server" Text="Confirm booking" Visible="False" OnClick="pc_booking_Click" />
                 <br />
@@ -144,16 +143,6 @@
 
 
         </div>
-
-
-        <hr />
-        <footer class="footer-pos-abc" >
-            <div class="container">
-                <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
-                <p>Website developed by Archit Bhatnagar</p>
-            </div>
-        </footer>
 
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -235,7 +235,7 @@
                         <h3>Team Fortress 2</h3>
                         <h4>Available for PC</h4>
                         <p>Team Fortress 2 is a team-based first-person shooter multiplayer video game developed by Valve Corporation. It is the sequel to the 1996 mod Team Fortress for Quake and its 1999 remake.In Team Fortress 2, players join one of two teams comprising nine character classes, battling in a variety of game modes including capture the flag and king of the hill.</p>
-                        
+
                         <p>
                             <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-TF2">Read More &raquo;</button>
                         </p>
@@ -269,50 +269,186 @@
 
 
                     <div class="col col-lg-4">
-                    <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
-                    <h3>Fifa-16</h3>
-                    <h4>Available for PS3, Xbox, PS4</h4>
-                    <p>
-                        FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote including the first women to appear on cover</p>
-                    <p>
-                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-Fifa-16">Read More &raquo;</button>
-                    </p>
-                    <!-- Modal -->
-                    <div id="Modal-Fifa-16" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
+                        <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>Fifa-16</h3>
+                        <h4>Available for PS3, Xbox, PS4</h4>
+                        <p>
+                            FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote including the first women to appear on cover
+                        </p>
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-Fifa-16">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-Fifa-16" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Fifa-16</h4>
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Fifa-16</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover,including the first women to appear.</p>
+                                        <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
+                                        <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
+                                        <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
+                                        <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
+                                        <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
+                                        <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <p>
-                                        <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
-                                    </p>
-                                    <br />
-                                    <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover,including the first women to appear.</p>
-                                    <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
-                                    <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
-                                    <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
-                                    <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
-                                    <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
-                                    <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+
                             </div>
-
                         </div>
-                    </div>
 
-                </div>
+                    </div>
 
                 </div>
             </div>
 
+            <br />
+            <br />
+
+            <div class="container center">
+                <div class="row">
+
+                    <div class="col col-lg-4">
+                        <img class="img-thumbnail" src="Images/modal-call-of-duty-advanced-warfare-wallpaper-5.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>Call of Duty: Advanced Warfare</h3>
+                        <h4>Available for PC</h4>
+                        <p>Call of Duty: Advanced Warfare is a military science fiction war thriller first-person shooter video game published by Activision.  The game features several significant changes; unlike other installments, Advanced Warfare does not use a traditional heads-up display (HUD); instead, all information is relayed to the player via holographic projections from the weapon equipped.</p>
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-CODAW">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-CODAW" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Call of Duty: Advanced Warfare</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-call-of-duty-advanced-warfare-wallpaper-5.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>Advanced Warfare, like the other Call of Duty titles, is presented in a first-person shooter perspective. The game features several significant changes; unlike other installments, Advanced Warfare does not use a traditional heads-up display (HUD); instead, all information is relayed to the player via holographic projections from the weapon equipped. The general gunplay remains unchanged, apart from new mechanics, such as 'Exo' movements. These Exo movements are performed from the Exoskeleton, which can boost, dash, and sky jump. The game is the first in the Call of Duty series that allows the player to choose differing types of conventional weaponry; for example, the game features regular conventional firearms, but the player can choose to use laser or directed energy weaponry, both of which have differing attributes. In addition to Exo movements, the game features different Exo abilities, such as Exo Cloak, which allows players to turn transparent for stealth for a period of time.</p>
+                                        <h4>Campaing</h4>
+                                        <p>The single-player campaign features one sole playable character, Jack Mitchell, as opposed to multiple characters in previous Call of Duty games. It makes use of pre-rendered cinematic cut scenes, similar to Call of Duty: Black Ops II, assisting in the story telling aspect of the campaign. After each mission, the player is given a certain amount of upgrade points that can be used to upgrade the Exo suit or weapons. The player can upgrade detection, armor, resistance, tactical, lethal grenade, sprint, recoil, flinch, reload, quick aim, and battery. The player may earn additional points by completing specific side objectives, one of which is collecting the game's collectable 'Intel'. The player can switch between different grenades, all of which possess distinctly different abilities.</p>
+                                        <h4>Multiplayer</h4>
+                                        <p>Apart from the Exo movement, Advanced Warfare‍ '​s multiplayer retains certain similarities to previous Call of Duty titles. The Pick 10 system in Black Ops II returns as Pick 13, allowing players to pick weapons, attachments, perks and score-streaks within a total of 13 allocation points. Score-streaks are also upgradable with different modules, allowing for additional abilities/effects, at an extra score cost. Advanced Warfare introduces weapon variants, which contain various different stats compared to the base weapons. This allows the game to contain over 350 weapons, both variants and base versions. Supply drops allow players to earn new gears through playing the game. The content of each supply drop is randomized, and can range from weapon variants to player customization items, as well as bonus experience points (XPs) time. Players can complete daily challenges to earn supply drops.</p>
+                                        <h3>Exo Survival</h3>
+                                        <p>Exo Survival was first introduced as CGCGMz‍ '​s cooperative game mode. Considered to be a new version of the Survival Mode from Modern Warfare 3, Exo Survival allows up to four players to engage in a wave-based match against A.I.-controlled enemies. Players can choose from four different classes of Exo, which grant different abilities and score-streaks. Weapons and score-streaks can be upgraded throughout each match. After a certain number of rounds, players are given objectives to perform, such as defending a location, or collecting intel from fallen enemies. Completing the objectives grant players bonus upgrade points; not completing them result in the players being punished, such as having their Exo suits temporarily disabled or activating hostile security turrets. Exo Survival is played on the game's multiplayer maps, with a total of 13 maps divived into four tiers. Each tier can be unlocked by playing the previous tier and survive a specific number of rounds.</p>
+                                        <h4>Exo Zombies</h4>
+                                        <p>Exo Zombies was first teased at the end of the Exo Survival map "Riot", and was officially announced with the Havoc downloadable content (DLC) pack. The game features zombies that utilize exo suits, giving them more maneuverability. <br /> The game mode stars five brand new characters. Exo Zombies plays similarly to the original Zombies game mode that has been featured in Treyarch's Call of Duty games since Call of Duty: World at War: up to four players have to survive against endless waves of undead enemies, with an optional story quest, or easter egg, that can be done at any time during a match. Players earn points by injuring and/or killing zombies, and use them to open doors/clear obstacles, or buy new weapons and perks to strengthen their chance of survival. Players can also acquire exo suits in the game mode, allowing them to utilize new movements.<br />Different types of zombies are present in the game, including Charger zombies that have increased movement speed, and Electro-magnetic zombies (EMZs) that can disable the players' Exo suit in close proximity. With the release of the Reckoning DLC pack, a new hardcore mode called "Double Feature" was also introduced, which can only be unlocked by finishing the story quest of the final map "Descent". In Double Feature, nearly all HUD elements are removed (except the point counter), zombies have more health and only give points to players upon death, players only get one life per round, and the game is played with a black-and-white filter to mimic horror movies.<br /> The first Exo Zombies map, " ", was released as part of the Havoc DLC map pack. The second map, "Infection", was released as part of the Ascendance DLC pack. The third map, "Carrier", was released as part of the Supremacy DLC pack.[27] The final map, "Descent", was released as part of the Reckoning DLC pack</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col col-lg-4">
+                        <img class="img-thumbnail" src="Images/modal-League-of-Legends-Wallpapers-7.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>League-of-Legends</h3>
+                        <h4>Available for PC</h4>
+                        <p>League of Legends (LoL) is a multiplayer online battle arena, real-time strategy video game developed and published by Riot Games, for Microsoft Windows[1] and Mac OS X. It is a free-to-play game supported by micro-transactions and inspired by the mod, Defense of the Ancients[2] for the video game Warcraft III: The Frozen Throne.</p>
+
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-League-of-Legends">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-League-of-Legends" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">League Of Leagends</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-League-of-Legends-Wallpapers-7.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>League of Legends (LoL) is a multiplayer online battle arena, real-time strategy video game developed and published by Riot Games, for Microsoft Windows and Mac OS X. It is a free-to-play game supported by micro-transactions and inspired by the mod, Defense of the Ancients for the video game Warcraft III: The Frozen Throne</p>
+                                        <p>In League of Legends, players assume the role of an unseen "summoner" that controls a "champion" with unique abilities and battle against a team of other players or computer-controlled champions. The goal is usually to destroy the opposing team's "nexus", a structure which lies at the heart of a base protected by defensive structures. Each League of Legends match is discrete, with all champions starting off fairly weak but increasing in strength by accumulating items and experience over the course of the game.</p>
+                                        <p>League of Legends was generally well received at release, and it has grown in popularity in the years since. By July 2012, League of Legends was the most played PC game in North America and Europe in terms of the number of hours played.[4] As of January 2014, over 67 million people play League of Legends per month, 27 million per day, and over 7.5 million concurrently during peak hours.</p>
+                                        <p>League of Legends is a 3D, third-person multiplayer online battle arena (MOBA) game.[10] The game consists of four game modes: Summoner's Rift, Twisted Treeline, Crystal Scar, and Howling Abyss. Players compete in matches, typically lasting 20–60 minutes. In each game mode teams work together to accomplish a terminal objective and achieve a victory condition, either to destroy a central objective controlled by the enemy team, known as a Nexus, or to capture and hold the most strategic points for the longest period of time. Each game mode includes a variety of smaller intermediate objectives that give players and teams advantages in achieving overall victory.</p>
+                                        <p>In all game modes players control characters called champions, chosen or assigned every match, who each have a set of unique abilities.[12] Champions begin every match at a low level (level one for Summoner's rift and Twisted Treeline, and level three for Crystal Scar and Howling Abyss), and then gain experience over the course of the match to achieve a maximum level of 18. Gaining champion levels in matches allows players to unlock their champion's special abilities and augment them in a number of ways unique to each character.</p>
+                                        <p>Players also begin each match with a low amount of gold, and can earn additional gold throughout the match in a variety of ways: by killing non-player characters known as minions and monsters, by killing or helping to kill enemy players, by destroying enemy structures, passively over time, and through unique item interactions or champion abilities. This gold can then be spent throughout the match to buy in-game items that further augment each champion's abilities and game play in a variety of ways. Champion experience, gold earned, and items bought are specific to each match and do not carry over to subsequent matches. Thus, all players begin each match on more-or-less equal footing relative to their opposing team.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col col-lg-4">
+                        <img class="img-thumbnail" src="Images/modal-world of tanks.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>World of Tanks</h3>
+                        <h4>Available for PC</h4>
+                        <p>World of Tanks is a massively multiplayer online game developed by Belarusian-Cypriot company Wargaming. It is built upon a freemium business model where the game is free-to-play, but participants also have the option of paying a fee for use of "premium" features. The focus is on player vs. player gameplay with each player controlling an armored vehicle.</p>
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-World-of-Tanks">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-World-of-Tanks" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Fifa-16</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover,including the first women to appear.</p>
+                                        <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
+                                        <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
+                                        <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
+                                        <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
+                                        <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
+                                        <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
 
     </form>
