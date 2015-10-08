@@ -54,6 +54,11 @@
     background-position:center;
     
 }
-p.small {
+p.small 
+{
     margin: 0em;
+}
+
+.midpage
+{
 }

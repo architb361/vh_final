@@ -37,8 +37,8 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="Default.aspx">Home</a></li>
                             <li class="active"><a href="#">Games</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li><a href="Gallery.aspx">Gallery</a></li>
+                            <li><a href="Events.aspx">Events</a></li>
                             <li><a href="SignUp.aspx">Sign Up</a></li>
 
                         </ul>
@@ -449,6 +449,140 @@
 
                 </div>
             </div>
+
+
+            <br />
+            <br />
+
+            <div class="container center">
+                <div class="row">
+
+                    <div class="col col-lg-4">
+                        <img class="img-thumbnail" src="Images/modal-world of warcraft.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>World of Warcraft</h3>
+                        <h4>Available for PC</h4>
+                        <p>World of Warcraft (WoW) is a massively multiplayer online role-playing game (MMORPG) created in 2004 by Blizzard Entertainment. It is the fourth released game set in the fantasy Warcraft universe, which was first introduced by Warcraft: Orcs & Humans in 1994. World of Warcraft takes place within the Warcraft world of Azeroth. The game was released on November 23, 2004.</p>
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-WOWC">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-WOWC" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">World of Warcraft</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-world of warcraft.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>World of Warcraft (WoW) is a massively multiplayer online role-playing game (MMORPG) created in 2004 by Blizzard Entertainment. It is the fourth released game set in the fantasy Warcraft universe, which was first introduced by Warcraft: Orcs & Humans in 1994.[3] World of Warcraft takes place within the Warcraft world of Azeroth, approximately four years after the events at the conclusion of Blizzard's previous Warcraft release, Warcraft III: The Frozen Throne. Blizzard Entertainment announced World of Warcraft on September 2, 2001.[5] The game was released on November 23, 2004, on the 10th anniversary of the Warcraft franchise.</p>
+                                        <p>The first expansion set of the game, The Burning Crusade, was released on January 16, 2007.[6] The second expansion set, Wrath of the Lich King, was released on November 13, 2008.[7] The third expansion set, Cataclysm, was released on December 7, 2010. The fourth expansion set, Mists of Pandaria, was released on September 25, 2012.[8] The fifth expansion set, Warlords of Draenor, was released on November 13, 2014.[9] The sixth expansion set, Legion, was announced at Gamescom 2015, on August 6, 2015</p>
+                                        <p>With 5.6 million subscribers as of the end of June 2015,[11][12] World of Warcraft is currently the world's most-subscribed MMORPG,[7][13] and holds the Guinness World Record for the most popular MMORPG by subscribers.[14][15][16][17] Having grossed over 10 billion dollars as of July 2012, it is also the highest grossing video game of all time.[18] In January 2014, it was announced that more than 100 million accounts had been created over the game's lifetime.</p>
+                                        <p>World of Warcraft is set in the same universe as the Warcraft series of real-time strategy games, and has a similar art direction.[20] World of Warcraft contains elements from fantasy, steampunk, and science fiction: such as gryphons, dragons, and elves; steam-powered automata; zombies, werewolves, and other horror monsters; as well as time travel, spaceships, and alien worlds.</p>
+                                        <p>World of Warcraft takes place in a 3D representation of the Warcraft universe that players can interact with through their characters. The game world initially consisted of the two continents in Azeroth: Kalimdor and the Eastern Kingdoms. Four separate expansions later added to the game's playable area the realms of Outland and Draenor and the continents of Northrend and Pandaria. As a player explores new locations, different routes and means of transportation become available. Players can access "flight masters" in newly discovered locations to fly to previously discovered locations in other parts of the world.[37] Players can also use boats, zeppelins, or portals to move from one continent to another. Although the game world remains relatively similar from day to day, seasonal events reflecting real world events, such as Halloween,[38] Christmas, Children's Week,[35] Easter, and Midsummer have been represented in the game world. Locations also have variable weather including, among other things, rain, snow, and dust storms.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col col-lg-4">
+                        <img class="img-thumbnail" src="Images/modal-League-of-Legends-Wallpapers-7.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>League-of-Legends</h3>
+                        <h4>Available for PC</h4>
+                        <p>League of Legends (LoL) is a multiplayer online battle arena, real-time strategy video game developed and published by Riot Games, for Microsoft Windows[1] and Mac OS X. It is a free-to-play game supported by micro-transactions and inspired by the mod, Defense of the Ancients[2] for the video game Warcraft III: The Frozen Throne.</p>
+
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-League-of-Legends">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-League-of-Legends" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">League Of Leagends</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-League-of-Legends-Wallpapers-7.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>League of Legends (LoL) is a multiplayer online battle arena, real-time strategy video game developed and published by Riot Games, for Microsoft Windows and Mac OS X. It is a free-to-play game supported by micro-transactions and inspired by the mod, Defense of the Ancients for the video game Warcraft III: The Frozen Throne</p>
+                                        <p>In League of Legends, players assume the role of an unseen "summoner" that controls a "champion" with unique abilities and battle against a team of other players or computer-controlled champions. The goal is usually to destroy the opposing team's "nexus", a structure which lies at the heart of a base protected by defensive structures. Each League of Legends match is discrete, with all champions starting off fairly weak but increasing in strength by accumulating items and experience over the course of the game.</p>
+                                        <p>League of Legends was generally well received at release, and it has grown in popularity in the years since. By July 2012, League of Legends was the most played PC game in North America and Europe in terms of the number of hours played.[4] As of January 2014, over 67 million people play League of Legends per month, 27 million per day, and over 7.5 million concurrently during peak hours.</p>
+                                        <p>League of Legends is a 3D, third-person multiplayer online battle arena (MOBA) game.[10] The game consists of four game modes: Summoner's Rift, Twisted Treeline, Crystal Scar, and Howling Abyss. Players compete in matches, typically lasting 20–60 minutes. In each game mode teams work together to accomplish a terminal objective and achieve a victory condition, either to destroy a central objective controlled by the enemy team, known as a Nexus, or to capture and hold the most strategic points for the longest period of time. Each game mode includes a variety of smaller intermediate objectives that give players and teams advantages in achieving overall victory.</p>
+                                        <p>In all game modes players control characters called champions, chosen or assigned every match, who each have a set of unique abilities.[12] Champions begin every match at a low level (level one for Summoner's rift and Twisted Treeline, and level three for Crystal Scar and Howling Abyss), and then gain experience over the course of the match to achieve a maximum level of 18. Gaining champion levels in matches allows players to unlock their champion's special abilities and augment them in a number of ways unique to each character.</p>
+                                        <p>Players also begin each match with a low amount of gold, and can earn additional gold throughout the match in a variety of ways: by killing non-player characters known as minions and monsters, by killing or helping to kill enemy players, by destroying enemy structures, passively over time, and through unique item interactions or champion abilities. This gold can then be spent throughout the match to buy in-game items that further augment each champion's abilities and game play in a variety of ways. Champion experience, gold earned, and items bought are specific to each match and do not carry over to subsequent matches. Thus, all players begin each match on more-or-less equal footing relative to their opposing team.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col col-lg-4">
+                        <img class="img-thumbnail" src="Images/modal-world of tanks.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>World of Tanks</h3>
+                        <h4>Available for PC</h4>
+                        <p>World of Tanks is a massively multiplayer online game developed by Belarusian-Cypriot company Wargaming. It is built upon a freemium business model where the game is free-to-play, but participants also have the option of paying a fee for use of "premium" features. The focus is on player vs. player gameplay with each player controlling an armored vehicle.</p>
+                        <p>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-World-of-Tanks">Read More &raquo;</button>
+                        </p>
+                        <!-- Modal -->
+                        <div id="Modal-World-of-Tanks" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Fifa-16</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
+                                        </p>
+                                        <br />
+                                        <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover,including the first women to appear.</p>
+                                        <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
+                                        <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
+                                        <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
+                                        <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
+                                        <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
+                                        <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
     </form>

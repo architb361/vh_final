@@ -33,7 +33,7 @@ public partial class SignUp : System.Web.UI.Page
             con.Close();
             if (res != 0)
             {
-                Response.Write("<script>alert('Regiested Successfully')</script>");
+                ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Regiested Successfully'); window.location='Default.aspx';", true);
 
             }
             else

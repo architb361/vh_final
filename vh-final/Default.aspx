@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
 
@@ -13,10 +13,22 @@
     <title>Home</title>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+        function callAlert(msg)
+        {
+            alert(msg);
+        }
+    </script>
+     <script type="text/javascript">
+    function openModal() {
+        $('#myModal').modal('show');
+    }
+</script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -43,7 +55,7 @@
                             <li><a href="#">Gallery</a></li>
                             <li><a href="#">Events</a></li>
                             <li><a href="SignUp.aspx">Sign Up</a></li>
-                            <li><a href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a></li>
+                            <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,20 +73,24 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            <asp:Label ID="lable_email" runat="server" Text="Email Id"></asp:Label>
+                            <asp:Label ID="Welcome" runat="server" Text="Hi, " Visible="false" ></asp:Label>
+                            <asp:Label ID="g_name" runat="server" Text="" Visible="false"></asp:Label>
                             <asp:TextBox ID="emailid" CssClass="form-control" placeholder="Enter email" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Id Required" ControlToValidate="emailid" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
+                            <asp:Label ID="lable_password" runat="server" Text="Password"></asp:Label>
                             <asp:TextBox ID="password" CssClass="form-control" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ControlToValidate="password" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
-                            
+
                         </div>
-                        <p class="text-right"><a href="#">Forgot password?</a></p>
+                        <p class="text-right"><asp:HyperLink ID="ForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink></p>
+                        <p class="text-right"><asp:HyperLink ID="gammerprofile" runat="server" Visible="False">Profile</asp:HyperLink></p>
                     </div>
                     <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn">Close</a>
+                        <asp:Button CssClass="btn btn-primary" ID="logout" runat="server" Text="Log-out" OnClick="logout_Click" Visible="false" />
                         <asp:Button CssClass="btn btn-primary" ID="login" runat="server" Text="Log-in" OnClick="login_Click" ValidationGroup="log-in" />
                     </div>
                 </div>
@@ -154,7 +170,8 @@
                     <h3>Fifa-16</h3>
                     <h4>Available for PS3, Xbox, PS4</h4>
                     <p>
-                        FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on cover</p>
+                        FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on cover
+                    </p>
                     <p>
                         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-Fifa-16">Read More &raquo;</button>
                     </p>
@@ -287,5 +304,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
