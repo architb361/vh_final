@@ -71,6 +71,12 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="enter gaming name" ControlToValidate="gamingname" Display="Dynamic" ValidationGroup="form"></asp:RequiredFieldValidator>
             </div>
 
+            <label class="col-xs-11">Date of Birth</label>
+            <div class="col-xs-11">
+                <asp:TextBox ID="DOB" CssClass="form-control" placeholder="mm/dd/yyyy" runat="server"></asp:TextBox>
+                <ajaxToolkit:CalendarExtender runat="server" BehaviorID="DOB_CalendarExtender" TargetControlID="DOB" ID="DOB_CalendarExtender"></ajaxToolkit:CalendarExtender>
+            </div>
+            
 
             <label class="col-xs-11">Email Id</label>
             <div class="col-xs-11">
@@ -115,17 +121,6 @@
 
         </div>
         <br />
-        <br />
-        <hr />
-        <footer class="footer-pos">
-            <div class="container">
-                <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
-                <p>Website developed by Archit Bhatnagar</p>
-            </div>
-        </footer>
-
-
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

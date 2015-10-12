@@ -96,6 +96,7 @@ public partial class _Default : System.Web.UI.Page
     {
         Session["logedin"] = null;
         Session["email-id"] = null;
+        Session["game_name"] = null;
         Response.Redirect("~/Default.aspx");
 
     }
@@ -103,16 +104,20 @@ public partial class _Default : System.Web.UI.Page
     protected void Book_Click(object sender, EventArgs e)
     {
         DateTime now = DateTime.Now;
+        now.AddHours(11);
+        now.AddMinutes(30);
         if (now.Hour == 23 && now.Minute > 30)
             Response.Write("<script>alert('Booking not allowed between 11:30 to 12:00')</script>");
-
-        if (Session["logedin"] != null)
-        {
-            Response.Redirect("~/Booking.aspx");
-        }
         else
         {
-            Response.Write("<script>alert('Please Log-In to book')</script>");
+            if (Session["logedin"] != null)
+            {
+                Response.Redirect("~/Booking.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('Please Log-In to book')</script>");
+            }
         }
     }
 }

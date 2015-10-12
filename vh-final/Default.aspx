@@ -52,10 +52,10 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="Default.aspx">Home</a></li>
                             <li><a href="Games.aspx">Games</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li><a href="Gallery.aspx">Gallery</a></li>
+                            <li><a href="Events.aspx">Events</a></li>
                             <li><a href="SignUp.aspx">Sign Up</a></li>
-                            <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a></li>
+                            <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">User</a></li>
                         </ul>
                     </div>
                 </div>
@@ -295,6 +295,7 @@
             <div class="container">
                 <p class="pull-right"><a href="#">Back to top</a></p>
                 <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
+                <p>All trademarks, logos, images and articles belong to their respective owners. All rights reserved.</p>
                 <p>Website developed by Archit Bhatnagar</p>
             </div>
         </footer>

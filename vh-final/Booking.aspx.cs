@@ -43,6 +43,35 @@ public partial class Booking : System.Web.UI.Page
         CheckBox25.Visible = false;
         CheckBox26.Visible = false;
     }
+    void deselect()
+    {
+        CheckBox1.Checked = false;
+        CheckBox2.Checked = false;
+        CheckBox3.Checked = false;
+        CheckBox4.Checked = false;
+        CheckBox5.Checked = false;
+        CheckBox6.Checked = false;
+        CheckBox7.Checked = false;
+        CheckBox8.Checked = false;
+        CheckBox9.Checked = false;
+        CheckBox10.Checked = false;
+        CheckBox11.Checked = false;
+        CheckBox12.Checked = false;
+        CheckBox13.Checked = false;
+        CheckBox14.Checked = false;
+        CheckBox15.Checked = false;
+        CheckBox16.Checked = false;
+        CheckBox17.Checked = false;
+        CheckBox18.Checked = false;
+        CheckBox19.Checked = false;
+        CheckBox20.Checked = false;
+        CheckBox21.Checked = false;
+        CheckBox22.Checked = false;
+        CheckBox23.Checked = false;
+        CheckBox24.Checked = false;
+        CheckBox25.Checked = false;
+        CheckBox26.Checked = false;
+    }
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -58,6 +87,7 @@ public partial class Booking : System.Web.UI.Page
         morethan1.Visible = false;
         OneController.Visible = false;
         hidecheckbox();
+        deselect();
         pc_booking.Visible = false;
         no_of_controllers.Visible = false;
     }
@@ -73,6 +103,7 @@ public partial class Booking : System.Web.UI.Page
         PC_more.Visible = false;
         no_of_pcs.Visible = false;
         hidecheckbox();
+        deselect();
         no_of_controllers.Visible = false;
     }
 
@@ -85,6 +116,7 @@ public partial class Booking : System.Web.UI.Page
         PC_more.Visible = false;
         no_of_pcs.Visible = false;
         hidecheckbox();
+        deselect();
         no_of_controllers.Visible = false;
         OneController.Checked = false;
         morethan1.Checked = false;
@@ -99,6 +131,7 @@ public partial class Booking : System.Web.UI.Page
         PC_more.Visible = false;
         no_of_pcs.Visible = false;
         hidecheckbox();
+        deselect();
         no_of_controllers.Visible = false;
         OneController.Checked = false;
         morethan1.Checked = false;

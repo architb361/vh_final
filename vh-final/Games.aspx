@@ -17,6 +17,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        function callAlert(msg)
+        {
+            alert(msg);
+        }
+    </script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -40,7 +47,7 @@
                             <li><a href="Gallery.aspx">Gallery</a></li>
                             <li><a href="Events.aspx">Events</a></li>
                             <li><a href="SignUp.aspx">Sign Up</a></li>
-
+                            <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">User</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,6 +58,38 @@
         <br />
         <br />
         <br />
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Log-in</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <asp:Label ID="lable_email" runat="server" Text="Email Id"></asp:Label>
+                            <asp:Label ID="Welcome" runat="server" Text="Hi, " Visible="false" ></asp:Label>
+                            <asp:Label ID="g_name" runat="server" Text="" Visible="false"></asp:Label>
+                            <asp:TextBox ID="emailid" CssClass="form-control" placeholder="Enter email" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Id Required" ControlToValidate="emailid" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="lable_password" runat="server" Text="Password"></asp:Label>
+                            <asp:TextBox ID="password" CssClass="form-control" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ControlToValidate="password" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
+
+                        </div>
+                        <p class="text-right"><asp:HyperLink ID="ForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink></p>
+                        <p class="text-right"><asp:HyperLink ID="gammerprofile" runat="server" Visible="False">Profile</asp:HyperLink></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn">Close</a>
+                        <asp:Button CssClass="btn btn-primary" ID="logout" runat="server" Text="Log-out" OnClick="logout_Click" Visible="false" />
+                        <asp:Button CssClass="btn btn-primary" ID="login" runat="server" Text="Log-in" OnClick="login_Click" ValidationGroup="log-in" />
+                    </div>
+                </div>
+            </div>
+        </div>
         <div>
             <div class="container center">
                 <div class="row">
@@ -351,7 +390,11 @@
                                         <h3>Exo Survival</h3>
                                         <p>Exo Survival was first introduced as CGCGMz‍ '​s cooperative game mode. Considered to be a new version of the Survival Mode from Modern Warfare 3, Exo Survival allows up to four players to engage in a wave-based match against A.I.-controlled enemies. Players can choose from four different classes of Exo, which grant different abilities and score-streaks. Weapons and score-streaks can be upgraded throughout each match. After a certain number of rounds, players are given objectives to perform, such as defending a location, or collecting intel from fallen enemies. Completing the objectives grant players bonus upgrade points; not completing them result in the players being punished, such as having their Exo suits temporarily disabled or activating hostile security turrets. Exo Survival is played on the game's multiplayer maps, with a total of 13 maps divived into four tiers. Each tier can be unlocked by playing the previous tier and survive a specific number of rounds.</p>
                                         <h4>Exo Zombies</h4>
-                                        <p>Exo Zombies was first teased at the end of the Exo Survival map "Riot", and was officially announced with the Havoc downloadable content (DLC) pack. The game features zombies that utilize exo suits, giving them more maneuverability. <br /> The game mode stars five brand new characters. Exo Zombies plays similarly to the original Zombies game mode that has been featured in Treyarch's Call of Duty games since Call of Duty: World at War: up to four players have to survive against endless waves of undead enemies, with an optional story quest, or easter egg, that can be done at any time during a match. Players earn points by injuring and/or killing zombies, and use them to open doors/clear obstacles, or buy new weapons and perks to strengthen their chance of survival. Players can also acquire exo suits in the game mode, allowing them to utilize new movements.<br />Different types of zombies are present in the game, including Charger zombies that have increased movement speed, and Electro-magnetic zombies (EMZs) that can disable the players' Exo suit in close proximity. With the release of the Reckoning DLC pack, a new hardcore mode called "Double Feature" was also introduced, which can only be unlocked by finishing the story quest of the final map "Descent". In Double Feature, nearly all HUD elements are removed (except the point counter), zombies have more health and only give points to players upon death, players only get one life per round, and the game is played with a black-and-white filter to mimic horror movies.<br /> The first Exo Zombies map, " ", was released as part of the Havoc DLC map pack. The second map, "Infection", was released as part of the Ascendance DLC pack. The third map, "Carrier", was released as part of the Supremacy DLC pack.[27] The final map, "Descent", was released as part of the Reckoning DLC pack</p>
+                                        <p>Exo Zombies was first teased at the end of the Exo Survival map "Riot", and was officially announced with the Havoc downloadable content (DLC) pack. The game features zombies that utilize exo suits, giving them more maneuverability.
+                                            <br />
+                                            The game mode stars five brand new characters. Exo Zombies plays similarly to the original Zombies game mode that has been featured in Treyarch's Call of Duty games since Call of Duty: World at War: up to four players have to survive against endless waves of undead enemies, with an optional story quest, or easter egg, that can be done at any time during a match. Players earn points by injuring and/or killing zombies, and use them to open doors/clear obstacles, or buy new weapons and perks to strengthen their chance of survival. Players can also acquire exo suits in the game mode, allowing them to utilize new movements.<br />
+                                            Different types of zombies are present in the game, including Charger zombies that have increased movement speed, and Electro-magnetic zombies (EMZs) that can disable the players' Exo suit in close proximity. With the release of the Reckoning DLC pack, a new hardcore mode called "Double Feature" was also introduced, which can only be unlocked by finishing the story quest of the final map "Descent". In Double Feature, nearly all HUD elements are removed (except the point counter), zombies have more health and only give points to players upon death, players only get one life per round, and the game is played with a black-and-white filter to mimic horror movies.<br />
+                                            The first Exo Zombies map, " ", was released as part of the Havoc DLC map pack. The second map, "Infection", was released as part of the Ascendance DLC pack. The third map, "Carrier", was released as part of the Supremacy DLC pack.[27] The final map, "Descent", was released as part of the Reckoning DLC pack</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -498,35 +541,36 @@
 
 
                     <div class="col col-lg-4">
-                        <img class="img-thumbnail" src="Images/modal-League-of-Legends-Wallpapers-7.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
-                        <h3>League-of-Legends</h3>
+                        <img class="img-thumbnail" src="Images/modal-The Witcher Wild Hunt.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <h3>The Witcher 3: Wild Hunt</h3>
                         <h4>Available for PC</h4>
-                        <p>League of Legends (LoL) is a multiplayer online battle arena, real-time strategy video game developed and published by Riot Games, for Microsoft Windows[1] and Mac OS X. It is a free-to-play game supported by micro-transactions and inspired by the mod, Defense of the Ancients[2] for the video game Warcraft III: The Frozen Throne.</p>
+                        <p>The Witcher 3: Wild Hunt is an action role-playing video game set in an open world environment, developed by video game developer CD Projekt RED. Announced in February 2013, it was released for Microsoft Windows, PlayStation 4, and Xbox One on 19 May 2015. The game is the third in the series, preceded by The Witcher and The Witcher 2: Assassins of Kings.</p>
 
                         <p>
-                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-League-of-Legends">Read More &raquo;</button>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-TWWH">Read More &raquo;</button>
                         </p>
                         <!-- Modal -->
-                        <div id="Modal-League-of-Legends" class="modal fade" role="dialog">
+                        <div id="Modal-TWWH" class="modal fade" role="dialog">
                             <div class="modal-dialog">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">League Of Leagends</h4>
+                                        <h4 class="modal-title">The Witcher 3: Wild Hunt</h4>
                                     </div>
                                     <div class="modal-body">
                                         <p>
-                                            <img class="img-thumbnail" src="Images/modal-League-of-Legends-Wallpapers-7.jpg" width="768" height="432" />
+                                            <img class="img-thumbnail" src="Images/modal-The Witcher Wild Hunt.jpg" width="768" height="432" />
                                         </p>
                                         <br />
-                                        <p>League of Legends (LoL) is a multiplayer online battle arena, real-time strategy video game developed and published by Riot Games, for Microsoft Windows and Mac OS X. It is a free-to-play game supported by micro-transactions and inspired by the mod, Defense of the Ancients for the video game Warcraft III: The Frozen Throne</p>
-                                        <p>In League of Legends, players assume the role of an unseen "summoner" that controls a "champion" with unique abilities and battle against a team of other players or computer-controlled champions. The goal is usually to destroy the opposing team's "nexus", a structure which lies at the heart of a base protected by defensive structures. Each League of Legends match is discrete, with all champions starting off fairly weak but increasing in strength by accumulating items and experience over the course of the game.</p>
-                                        <p>League of Legends was generally well received at release, and it has grown in popularity in the years since. By July 2012, League of Legends was the most played PC game in North America and Europe in terms of the number of hours played.[4] As of January 2014, over 67 million people play League of Legends per month, 27 million per day, and over 7.5 million concurrently during peak hours.</p>
-                                        <p>League of Legends is a 3D, third-person multiplayer online battle arena (MOBA) game.[10] The game consists of four game modes: Summoner's Rift, Twisted Treeline, Crystal Scar, and Howling Abyss. Players compete in matches, typically lasting 20–60 minutes. In each game mode teams work together to accomplish a terminal objective and achieve a victory condition, either to destroy a central objective controlled by the enemy team, known as a Nexus, or to capture and hold the most strategic points for the longest period of time. Each game mode includes a variety of smaller intermediate objectives that give players and teams advantages in achieving overall victory.</p>
-                                        <p>In all game modes players control characters called champions, chosen or assigned every match, who each have a set of unique abilities.[12] Champions begin every match at a low level (level one for Summoner's rift and Twisted Treeline, and level three for Crystal Scar and Howling Abyss), and then gain experience over the course of the match to achieve a maximum level of 18. Gaining champion levels in matches allows players to unlock their champion's special abilities and augment them in a number of ways unique to each character.</p>
-                                        <p>Players also begin each match with a low amount of gold, and can earn additional gold throughout the match in a variety of ways: by killing non-player characters known as minions and monsters, by killing or helping to kill enemy players, by destroying enemy structures, passively over time, and through unique item interactions or champion abilities. This gold can then be spent throughout the match to buy in-game items that further augment each champion's abilities and game play in a variety of ways. Champion experience, gold earned, and items bought are specific to each match and do not carry over to subsequent matches. Thus, all players begin each match on more-or-less equal footing relative to their opposing team.</p>
+                                        <p>The Witcher 3: Wild Hunt (Polish: Wiedźmin 3: Dziki Gon) is an action role-playing video game set in an open world environment, developed by video game developer CD Projekt RED. Announced in February 2013, it was released for Microsoft Windows, PlayStation 4, and Xbox One on 19 May 2015. The game is the third in the series, preceded by The Witcher and The Witcher 2: Assassins of Kings, which are based on the series of fantasy novels by author Andrzej Sapkowski.</p>
+                                        <p>Played in a third-person perspective, players control protagonist Geralt of Rivia, a Witcher who sets out on a long journey through the large land of Northern Kingdoms. Players battle against the world's many dangers using swords and magic, while interacting with non-player characters and completing side quests and main missions all to progress through the story. Players mostly travel by foot, or mounted on Geralt's horse Roach.</p>
+                                        <h5>The game was met with acclaim from critics and has sold over 6 million copies.</h5>
+                                        <h4>Gameplay</h4>
+                                        <p>The Witcher 3: Wild Hunt is more than "30.0 times larger" than previous Witcher games, requiring players to sail by boat to some locations and ride by horseback to others. However, fast travelling around the areas of known locations is also possible. The Witcher 3 has been described as "20% bigger than Skyrim". Many actions the player performs affect the world; many of the quests have a number of options on how to complete them, and the outcomes differ. CD Projekt RED anticipates approximately 100 hours for the completion of the game, 50 of them belonging to side quests, and 50 belonging to the main story line.</p>
+                                        <p>While similar to the previous Witcher games, Wild Hunt improved on several aspects from past games. Combat revolves around an action role-playing game system alongside the use of magic. The fighting system from previous games was significantly revamped. Wild Hunt introduces some new mechanics, such as Witcher-sense, combat on horseback and at sea, swimming underwater, and the use of a crossbow. Additionally, Geralt can jump, climb, and vault over smaller obstacles. The climbing mechanics were described as "not exactly" like Assassin's Creed, but "similar to what we have in Uncharted". Item creation and potion brewing still remain as in previous games, but have been modified from The Witcher 2 to be less unforgiving. Traps from The Witcher 2 have been entirely omitted. The same five Witcher signs returned but slightly modified, with each one having an alternative form that can be used.</p>
+                                        <p>The game features responsive, advanced artificial intelligence and dynamic environments. The day and night cycle influences some monsters and their powers, similar to the common mythological motif of a werewolf gaining powers during the night of a full moon. The game also features a dynamic beard growth system, in which the beard of the playable character Geralt grows as he spends time in the world.</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -541,14 +585,14 @@
 
                     <div class="col col-lg-4">
                         <img class="img-thumbnail" src="Images/modal-world of tanks.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
-                        <h3>World of Tanks</h3>
+                        <h3>Far Cry 3</h3>
                         <h4>Available for PC</h4>
-                        <p>World of Tanks is a massively multiplayer online game developed by Belarusian-Cypriot company Wargaming. It is built upon a freemium business model where the game is free-to-play, but participants also have the option of paying a fee for use of "premium" features. The focus is on player vs. player gameplay with each player controlling an armored vehicle.</p>
+                        <p>Far Cry 3 is an open world action-adventure first-person shooter video game developed by Ubisoft Montreal in conjunction with Ubisoft Massive, Ubisoft Red Storm, Ubisoft Shanghai, and Ubisoft Reflections, published by Ubisoft for Microsoft Windows, Xbox 360, and PlayStation 3.</p>
                         <p>
                             <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-World-of-Tanks">Read More &raquo;</button>
                         </p>
                         <!-- Modal -->
-                        <div id="Modal-World-of-Tanks" class="modal fade" role="dialog">
+                        <div id="Modal-Farcry3" class="modal fade" role="dialog">
                             <div class="modal-dialog">
 
                                 <!-- Modal content-->
