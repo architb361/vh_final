@@ -62,7 +62,7 @@ public partial class SignUp : System.Web.UI.Page
             smsg += "<br/>Email-id:" + emailid.Text.Trim();
             smsg += "<br/>Password: " + password.Text.Trim();
             smsg += "<br/>Your account is not activated still, please activate it by clicking here:";
-            smsg += "<a href=" + "www.virtualhighs.com" + "?username=" + emailid.Text + ">" + "Activate</a></p></body></html>";
+            smsg += "<a href=" + "www.virtualhighs.com/ActivateUser.aspx" + "?username=" + emailid.Text + ">" + "Activate</a></p></body></html>";
             msg.Body = smsg;
             msg.IsBodyHtml = true;
             smtp.UseDefaultCredentials = false;
@@ -80,7 +80,7 @@ public partial class SignUp : System.Web.UI.Page
 
         }
         else
-            Response.Write("<script>alert('There was some error')</script>");
+            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('There was some error'); window.location='SignUp.aspx';", true);
         //}
         //catch(Exception ex)
         //{

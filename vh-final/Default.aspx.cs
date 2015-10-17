@@ -21,10 +21,12 @@ public partial class _Default : System.Web.UI.Page
             login.Visible = false;
             logout.Visible = true;
             g_name.Text = Session["game_name"].ToString();
+            gammername= Session["game_name"].ToString();
             g_name.Visible = true;
             Welcome.Visible = true;
             gammerprofile.Visible = true;
             ForgotPassword.Visible = false;
+            ClientScript.RegisterStartupScript(GetType(), "", "myFunction('Log-out'); myheader('Log-out'); mygamename(\'" + gammername + "\');", true);
         }
         else
         {
@@ -51,10 +53,11 @@ public partial class _Default : System.Web.UI.Page
         //  try {
         string con_string = WebConfigurationManager.ConnectionStrings["virtualhighsConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(con_string);
-        string qry = "select * from vh_login where email_id=@id and password=@pwd";
+        string qry = "select * from vh_login where email_id=@id and password=@pwd and verified=@verified";
         SqlCommand cmd = new SqlCommand(qry, con);
         cmd.Parameters.AddWithValue("@id", emailid.Text.Trim());
         cmd.Parameters.AddWithValue("@pwd", password.Text.Trim());
+        cmd.Parameters.AddWithValue("@verified", "true");
         con.Open();
         SqlDataReader rd = cmd.ExecuteReader();
 
@@ -78,13 +81,15 @@ public partial class _Default : System.Web.UI.Page
             Welcome.Visible = true;
             gammerprofile.Visible = true;
             ForgotPassword.Visible = false;
-            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Loged in successfully')", true);
-            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "none", "<script>$('#mymodal').modal('show');</script>", false);
+            con.Close();
+            ClientScript.RegisterStartupScript(GetType(), "", "myFunction('Log-out'); myheader('Log-out'); mygamename(\'" + gammername + "\');", true);
+            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Loged in successfully'); window.location='Default.aspx';", true);
 
         }
         else
         {
             con.Close();
+            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Wrong credentials or Email-Id not verified'); window.location='Default.aspx';", true);
         }
         // }
         //  catch(Exception err)
@@ -104,10 +109,10 @@ public partial class _Default : System.Web.UI.Page
     protected void Book_Click(object sender, EventArgs e)
     {
         DateTime now = DateTime.Now;
-        now.AddHours(11);
-        now.AddMinutes(30);
-        if (now.Hour == 23 && now.Minute > 30)
-            Response.Write("<script>alert('Booking not allowed between 11:30 to 12:00')</script>");
+        DateTime us = now.AddHours(11);
+        DateTime US = us.AddMinutes(30);
+        if (US.Hour == 23 && US.Minute > 30)
+            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Booking is not allowed between 11:30 pm to 12:00 am'); window.location='Default.aspx';", true);
         else
         {
             if (Session["logedin"] != null)
@@ -116,7 +121,7 @@ public partial class _Default : System.Web.UI.Page
             }
             else
             {
-                Response.Write("<script>alert('Please Log-In to book')</script>");
+                ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Please Log-In to book'); window.location='Default.aspx'", true);
             }
         }
     }

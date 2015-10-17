@@ -1,5 +1,6 @@
-﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
+<%@ Register TagPrefix="ajaxToolkit" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,21 +19,35 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="Scripts/jquery-2.1.4.js"></script>
     <script type="text/javascript">
-        function callAlert(msg)
-        {
+        function callAlert(msg) {
             alert(msg);
         }
     </script>
-     <script type="text/javascript">
-    function openModal() {
-        $('#myModal').modal('show');
-    }
-</script>
-
+    <script type="text/javascript">
+        function openModal() {
+            $('#myModal').modal('show');
+        }
+    </script>
+    <script type="text/javascript">
+        function myFunction(g_name) {
+            document.getElementById("login-logout").innerHTML = g_name;
+        }
+    </script>
+    <script type="text/javascript">
+        function myheader(g_name) {
+            document.getElementById("model-header").innerHTML = g_name;
+        }
+    </script>
+    <script type="text/javascript">
+        function mygamename(g_name) {
+            document.getElementById("hi-gammer").innerHTML = 'hi ' + g_name;
+            document.getElementById("hi-gammer").href = "GammerProfile.aspx";
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
-
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
 
         <div>
@@ -47,6 +62,7 @@
                         </button>
                         <a class="navbar-brand" href="Default.aspx"><span>
                             <img alt="Logo" src="Images/dota-2-official.jpg" height="30" /></span>Virtual Highs</a>
+                        <a class="navbar-text" id="hi-gammer">sup</a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -55,7 +71,7 @@
                             <li><a href="Gallery.aspx">Gallery</a></li>
                             <li><a href="Events.aspx">Events</a></li>
                             <li><a href="SignUp.aspx">Sign Up</a></li>
-                            <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">User</a></li>
+                            <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a></li>
                         </ul>
                     </div>
                 </div>
@@ -69,12 +85,12 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Log-in</h4>
+                        <h4 class="modal-title" id="model-header">Log-in</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
                             <asp:Label ID="lable_email" runat="server" Text="Email Id"></asp:Label>
-                            <asp:Label ID="Welcome" runat="server" Text="Hi, " Visible="false" ></asp:Label>
+                            <asp:Label ID="Welcome" runat="server" Text="Hi, " Visible="false"></asp:Label>
                             <asp:Label ID="g_name" runat="server" Text="" Visible="false"></asp:Label>
                             <asp:TextBox ID="emailid" CssClass="form-control" placeholder="Enter email" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Id Required" ControlToValidate="emailid" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
@@ -85,8 +101,12 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ControlToValidate="password" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
 
                         </div>
-                        <p class="text-right"><asp:HyperLink ID="ForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink></p>
-                        <p class="text-right"><asp:HyperLink ID="gammerprofile" runat="server" Visible="False">Profile</asp:HyperLink></p>
+                        <p class="text-right">
+                            <asp:HyperLink ID="ForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink>
+                        </p>
+                        <p class="text-right">
+                            <asp:HyperLink ID="gammerprofile" runat="server" Visible="False">Profile</asp:HyperLink>
+                        </p>
                     </div>
                     <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -156,6 +176,11 @@
         <div class="center">
             <p>Book now to enjoy the whole new feel to gaming</p>
             <asp:Button ID="Book" CssClass="btn-lg btn-success" runat="server" Text="Book now" OnClick="Book_Click" />
+            <ajaxToolkit:HoverMenuExtender runat="server" DynamicServicePath="" BehaviorID="Book_HoverMenuExtender" TargetControlID="Book" ID="Book_HoverMenuExtender" PopupControlID="Panel1"></ajaxToolkit:HoverMenuExtender>
+            <asp:Panel ID="Panel1" CssClass="alert-info" runat="server" BorderStyle="Solid">
+                    <b>Booking is not allowed between 11:30pm to 12:00</b>
+                    <br />
+                </asp:Panel>
         </div>
         <!-- New Releases -->
         <h2 class="center">New Releases</h2>

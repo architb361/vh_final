@@ -18,12 +18,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-        function callAlert(msg)
-        {
+        function callAlert(msg) {
             alert(msg);
         }
     </script>
-
+    <script type="text/javascript">
+        function myFunction(g_name) {
+            document.getElementById("login-logout").innerHTML = g_name;
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -68,7 +71,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <asp:Label ID="lable_email" runat="server" Text="Email Id"></asp:Label>
-                            <asp:Label ID="Welcome" runat="server" Text="Hi, " Visible="false" ></asp:Label>
+                            <asp:Label ID="Welcome" runat="server" Text="Hi, " Visible="false"></asp:Label>
                             <asp:Label ID="g_name" runat="server" Text="" Visible="false"></asp:Label>
                             <asp:TextBox ID="emailid" CssClass="form-control" placeholder="Enter email" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Id Required" ControlToValidate="emailid" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
@@ -79,8 +82,10 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ControlToValidate="password" Display="Dynamic" ValidationGroup="log-in"></asp:RequiredFieldValidator>
 
                         </div>
-                        <p class="text-right"><asp:HyperLink ID="ForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink></p>
-                        <p class="text-right"><asp:HyperLink ID="gammerprofile" runat="server" Visible="False">Profile</asp:HyperLink></p>
+                        <p class="text-right">
+                            <asp:HyperLink ID="ForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink></p>
+                        <p class="text-right">
+                            <asp:HyperLink ID="gammerprofile" runat="server" Visible="False">Profile</asp:HyperLink></p>
                     </div>
                     <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -390,11 +395,13 @@
                                         <h3>Exo Survival</h3>
                                         <p>Exo Survival was first introduced as CGCGMz‍ '​s cooperative game mode. Considered to be a new version of the Survival Mode from Modern Warfare 3, Exo Survival allows up to four players to engage in a wave-based match against A.I.-controlled enemies. Players can choose from four different classes of Exo, which grant different abilities and score-streaks. Weapons and score-streaks can be upgraded throughout each match. After a certain number of rounds, players are given objectives to perform, such as defending a location, or collecting intel from fallen enemies. Completing the objectives grant players bonus upgrade points; not completing them result in the players being punished, such as having their Exo suits temporarily disabled or activating hostile security turrets. Exo Survival is played on the game's multiplayer maps, with a total of 13 maps divived into four tiers. Each tier can be unlocked by playing the previous tier and survive a specific number of rounds.</p>
                                         <h4>Exo Zombies</h4>
-                                        <p>Exo Zombies was first teased at the end of the Exo Survival map "Riot", and was officially announced with the Havoc downloadable content (DLC) pack. The game features zombies that utilize exo suits, giving them more maneuverability.
+                                        <p>
+                                            Exo Zombies was first teased at the end of the Exo Survival map "Riot", and was officially announced with the Havoc downloadable content (DLC) pack. The game features zombies that utilize exo suits, giving them more maneuverability.
                                             <br />
                                             The game mode stars five brand new characters. Exo Zombies plays similarly to the original Zombies game mode that has been featured in Treyarch's Call of Duty games since Call of Duty: World at War: up to four players have to survive against endless waves of undead enemies, with an optional story quest, or easter egg, that can be done at any time during a match. Players earn points by injuring and/or killing zombies, and use them to open doors/clear obstacles, or buy new weapons and perks to strengthen their chance of survival. Players can also acquire exo suits in the game mode, allowing them to utilize new movements.<br />
                                             Different types of zombies are present in the game, including Charger zombies that have increased movement speed, and Electro-magnetic zombies (EMZs) that can disable the players' Exo suit in close proximity. With the release of the Reckoning DLC pack, a new hardcore mode called "Double Feature" was also introduced, which can only be unlocked by finishing the story quest of the final map "Descent". In Double Feature, nearly all HUD elements are removed (except the point counter), zombies have more health and only give points to players upon death, players only get one life per round, and the game is played with a black-and-white filter to mimic horror movies.<br />
-                                            The first Exo Zombies map, " ", was released as part of the Havoc DLC map pack. The second map, "Infection", was released as part of the Ascendance DLC pack. The third map, "Carrier", was released as part of the Supremacy DLC pack.[27] The final map, "Descent", was released as part of the Reckoning DLC pack</p>
+                                            The first Exo Zombies map, " ", was released as part of the Havoc DLC map pack. The second map, "Infection", was released as part of the Ascendance DLC pack. The third map, "Carrier", was released as part of the Supremacy DLC pack.[27] The final map, "Descent", was released as part of the Reckoning DLC pack
+                                        </p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -584,12 +591,12 @@
 
 
                     <div class="col col-lg-4">
-                        <img class="img-thumbnail" src="Images/modal-world of tanks.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
+                        <img class="img-thumbnail" src="Images/modal-Farcry3.jpg" alt="modal-Counter_Strike_Global_Offensive" width="320" height="180" />
                         <h3>Far Cry 3</h3>
                         <h4>Available for PC</h4>
-                        <p>Far Cry 3 is an open world action-adventure first-person shooter video game developed by Ubisoft Montreal in conjunction with Ubisoft Massive, Ubisoft Red Storm, Ubisoft Shanghai, and Ubisoft Reflections, published by Ubisoft for Microsoft Windows, Xbox 360, and PlayStation 3.</p>
+                        <p>Far Cry 3 is an open world action-adventure first-person shooter video game developed by Ubisoft Montreal in conjunction with Ubisoft Massive, Ubisoft Red Storm, Ubisoft Shanghai, and Ubisoft Reflections, published by Ubisoft for Microsoft Windows, Xbox 360, and PlayStation 3. The third installment in the Far Cry series, Far Cry 3 was critically acclaimed upon release.</p>
                         <p>
-                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-World-of-Tanks">Read More &raquo;</button>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#Modal-Farcry3">Read More &raquo;</button>
                         </p>
                         <!-- Modal -->
                         <div id="Modal-Farcry3" class="modal fade" role="dialog">
@@ -599,20 +606,21 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Fifa-16</h4>
+                                        <h4 class="modal-title">Far Cry 3</h4>
                                     </div>
                                     <div class="modal-body">
                                         <p>
-                                            <img class="img-thumbnail" src="Images/modal-FIFA-16.jpg" width="768" height="432" />
+                                            <img class="img-thumbnail" src="Images/modal-Farcry3.jpg" width="768" height="432" />
                                         </p>
                                         <br />
-                                        <p>FIFA 16 is an upcoming association football simulation video game published by EA Sports for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players. It is also the first in which the players on the covers were chosen by popular vote, including the first women to appear on the cover,including the first women to appear.</p>
-                                        <p>For the first time in the series, FIFA 16 will include female footballers, with 12 women's national teams: Australia, Brazil, Canada, China, England, France, Germany, Italy, Mexico, Spain, Sweden, and the United States. David Rutter, vice president of the company, stated that "Bringing some of the best women's players and teams in the world to our franchise is a massive event for EA Sports". In February 2013, Spanish captain Verónica Boquete had used a Change.org petition to lobby FIFA to include female players, earning over 20,000 signatures in its first 24 hours.</p>
-                                        <p>Players will not be able to create mixed-gender teams or play women's teams against men's teams, but they will have the chance to use women's teams in Match Day (offline friendlies), online friendlies and an offline tournament modeled after the FIFA Women's World Cup.</p>
-                                        <p>The game contains 78 stadiums, including 50 real-world venues. Fratton Park, home of Portsmouth, was added to in honour of Portsmouth fan Simon Humber, Creative Director of the FIFA series, who died of cancer in 2015.</p>
-                                        <p>A new Training Mode was also added to Career Mode allowing the player to develop footballers in the team of which they are managing without actually playing them. These are in the form of skill games, a feature added to the series previously. It allows the player to set a specific focus on which the footballer should develop on meaning that he will grow specifically according to the chosen focus attribute. Doing this also increases the transfer value of the player.</p>
-                                        <p>New friendly enhancements were added to the mode with players now able to pick a friendly tournament before a season starts. Winning these friendly tournaments gives the player a reward in the form of a transfer budget boost. Also, unlimited substitutions are permitted when playing these friendly games. Other features include two-year loans, many realistic transfer budget enhancements, improved player values as well as the ability to sign free agents out of transfer windows</p>
-                                        <p>New features that are exclusive to the PlayStation 4, Xbox One and PC versions of the game will involve a licensed presentation package for the Bundesliga, new weather and kick-off time variations, and the use of vanishing spray during certain matches.</p>
+                                        <p>Far Cry 3 is an open world action-adventure first-person shooter video game developed by Ubisoft Montreal in conjunction with Ubisoft Massive, Ubisoft Red Storm, Ubisoft Shanghai, and Ubisoft Reflections, published by Ubisoft for Microsoft Windows, Xbox 360, and PlayStation 3.</p>
+                                        <p>Far Cry 3 is set on a tropical island between the Indian and Pacific Oceans. After a vacation goes awry, protagonist Jason Brody must save his friends, who have been kidnapped by pirates and escape from the island and its unhinged inhabitants.</p>
+                                        <p>he third installment in the Far Cry series, Far Cry 3 was critically acclaimed upon release, with reviewers praising its world design, open-ended gameplay and story, while the game's multiplayer mode was criticized.</p>
+                                        <h4>Gameplay</h4>
+                                        <p>Far Cry 3 is a first-person shooter, which also features role-playing game elements including experience points, skill trees, and a crafting system. The player has the ability to take cover behind objects to break enemies' lines of sight and to peek around and over cover and blindfire.</p>
+                                        <p>The player has the ability to perform silent takedowns by performing melee attacks from above, below, or close behind. The game's narrative director, Jason Vandenberghe, said that the story mode map is around ten times larger than the game's previous installments. Players are given the ability to survey and plan out their attacks with stealth takedown combinations and tag enemies with the camera in order to track their movement once they break the player's line of sight.</p>
+                                        <p>Equipment is controlled by a simple system. As missions are completed, new items are unlocked to be purchased or crafted by Jason, using the pelts of various animals found around the island to improve items-, weapons- and ammunitions-carrying capabilities. When scramblers on radio towers are removed, areas of the map are opened and weapons in the shop are first made available for purchase, and ultimately made available for free.</p>
+                                        <p>Skills are collected by gaining experience from completing missions and killing enemies, and are unlocked in three skill trees, which correspond to the Spider, the Heron, and the Shark. Each skill tree upgrades different aspects of Jason's abilities, with the Spider upgrading his stealth takedowns and hunting skills, Shark for assault takedowns and health, with the Heron upgrading his long-range takedowns and mobility. As skills are collected, the tattoo on Jason's forearm grows which is made up of several different tribal designs resembling the three animal skill trees.</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -628,6 +636,17 @@
             </div>
 
         </div>
+
+
+         <hr />
+        <footer>
+            <div class="container">
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="Gallery.aspx">Gallery</a> &middot; <a href="Events.aspx">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
+                <p>All trademarks, logos, images and articles belong to their respective owners. All rights reserved.</p>
+                <p>Website developed by Archit Bhatnagar</p>
+            </div>
+        </footer> 
 
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

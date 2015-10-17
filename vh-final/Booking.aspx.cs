@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using System.Net.Mail;
+using System.Net;
 
 public partial class Booking : System.Web.UI.Page
 {
@@ -71,6 +73,34 @@ public partial class Booking : System.Web.UI.Page
         CheckBox24.Checked = false;
         CheckBox25.Checked = false;
         CheckBox26.Checked = false;
+    }
+
+    void sendemail(string emailid, bool[] arr)
+    {
+        MailMessage msg = new MailMessage();
+        MailAddress frm = new MailAddress("confirmation@virtualhighs.com");
+        msg.From = frm;
+        MailAddress to = new MailAddress(emailid.Trim());
+        msg.To.Add(to);
+        msg.Subject = "Booking confirmation";
+        SmtpClient smtp = new SmtpClient();
+        smtp.Host = "mail.virtualhighs.com";
+        smtp.Port = 25;
+        string smsg = "<html><body><h1>Virtual Highs</h1><p>New Booking on our website, find your booking details below:";
+
+        msg.Body = smsg;
+        msg.IsBodyHtml = true;
+        smtp.UseDefaultCredentials = false;
+        NetworkCredential nkc = new NetworkCredential("confirmation@virtualhighs.com", "14casper");
+        smtp.Credentials = nkc;
+        try
+        {
+            smtp.Send(msg);
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 
     protected void Page_Load(object sender, EventArgs e)
@@ -139,6 +169,7 @@ public partial class Booking : System.Web.UI.Page
 
     protected void PC1_CheckedChanged(object sender, EventArgs e)
     {
+        int flag = 0;
         pc_booking.Visible = false;
         no_of_pcs.Visible = false;
         morethan1.Visible = false;
@@ -229,15 +260,20 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox1.Visible = true;
+                            flag = 1;
+                        }
                         break;
-
                     case 1:
                         if (r1 == true && r2 == true && r3 == true && r4 == true && r5 == true && r6 == true && r7 == true && r8 == true && r9 == true && r10 == true)
                         {
                         }
                         else
+                        {
                             CheckBox2.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 2:
@@ -245,7 +281,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox3.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 3:
@@ -253,7 +292,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox4.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 4:
@@ -261,7 +303,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox5.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 5:
@@ -269,7 +314,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox6.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 6:
@@ -277,7 +325,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox7.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 7:
@@ -285,7 +336,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox8.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 8:
@@ -293,7 +347,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox9.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 9:
@@ -301,7 +358,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox10.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 10:
@@ -309,7 +369,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox11.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 11:
@@ -317,7 +380,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox12.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 12:
@@ -325,7 +391,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox13.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 13:
@@ -333,7 +402,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox14.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 14:
@@ -341,7 +413,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox15.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 15:
@@ -349,14 +424,20 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox16.Visible = true;
+                            flag = 1;
+                        }
                         break;
                     case 16:
                         if (r1 == true && r2 == true && r3 == true && r4 == true && r5 == true && r6 == true && r7 == true && r8 == true && r9 == true && r10 == true)
                         {
                         }
                         else
+                        {
                             CheckBox17.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 17:
@@ -364,7 +445,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox18.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 18:
@@ -372,7 +456,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox19.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 19:
@@ -380,7 +467,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox20.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 20:
@@ -388,7 +478,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox21.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 21:
@@ -396,7 +489,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox22.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 22:
@@ -404,7 +500,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox23.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 23:
@@ -412,7 +511,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox24.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 24:
@@ -420,7 +522,10 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox25.Visible = true;
+                            flag = 1;
+                        }
                         break;
 
                     case 25:
@@ -428,11 +533,17 @@ public partial class Booking : System.Web.UI.Page
                         {
                         }
                         else
+                        {
                             CheckBox26.Visible = true;
+                            flag = 1;
+                        }
                         break;
                 }
             }
-            pc_booking.Visible = true;
+            if (flag == 1)
+                pc_booking.Visible = true;
+            else
+                ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Sorry All PCs are booked');", true);
         }
         else
         {
@@ -507,7 +618,7 @@ public partial class Booking : System.Web.UI.Page
 
     protected void no_of_pcs_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        int flag = 0;
         CheckBox1.Visible = false;
         CheckBox2.Visible = false;
         CheckBox3.Visible = false;
@@ -744,13 +855,892 @@ public partial class Booking : System.Web.UI.Page
                         break;
                 }
             }
+            else
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Sorry that no of pcs are not available');", true);
+                flag = 1;
+            }
+
         }
-        pc_booking.Visible = true;
+        if (flag != 1)
+            pc_booking.Visible = true;
     }
 
     protected void OneController_CheckedChanged(object sender, EventArgs e)
     {
         no_of_controllers.Visible = false;
+        if (PS4.Checked)
+        {
+            string qry = "select * from vh_ps4_1";
+            ad = new SqlDataAdapter(qry, con_string);
+            DataTable ps41 = new DataTable();
+            ad.Fill(ps41);
+
+            qry = "select * from vh_ps4_2";
+            ad = new SqlDataAdapter(qry, con_string);
+            DataTable ps42 = new DataTable();
+            ad.Fill(ps42);
+            int flag = 0;
+
+            DataRow ps4r1, ps4r2;
+            for (int i = 0; i < 26; i++)
+            {
+                ps4r1 = ps41.Rows[i];
+                ps4r2 = ps42.Rows[i];
+                bool r1 = bool.Parse(ps4r1["booked"].ToString());
+                bool r2 = bool.Parse(ps4r2["booked"].ToString());
+
+                switch (i)
+                {
+                    case 0:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox1.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 1:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox2.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 2:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox3.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 3:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox4.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 4:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox5.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 5:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox6.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 6:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox7.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 7:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox8.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 8:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox9.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 9:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox10.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 10:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox11.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 11:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox12.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 12:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox13.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 13:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox14.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 14:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox15.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 15:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox16.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 16:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox17.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 17:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox18.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 18:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox19.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 19:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox20.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 20:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox21.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 21:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox22.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 22:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox23.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 23:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox24.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 24:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox25.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 25:
+                        if (r1 || r2)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox26.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                }
+                if (flag != 0)
+                    pc_booking.Visible = true;
+                else
+                    ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Sorry all PS4 are booked');", true);
+            }
+
+        }
+        else if (PS3.Checked)
+        {
+            int flag = 0;
+            string qry = "select * from vh_ps3";
+            ad = new SqlDataAdapter(qry, con_string);
+            DataTable ps31 = new DataTable();
+            ad.Fill(ps31);
+
+            DataRow ps3r1;
+            for (int i = 0; i < 26; i++)
+            {
+                ps3r1 = ps31.Rows[i];
+                bool r1 = bool.Parse(ps3r1["booked"].ToString());
+
+
+                switch (i)
+                {
+                    case 0:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox1.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 1:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox2.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 2:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox3.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 3:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox4.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 4:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox5.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 5:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox6.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 6:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox7.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 7:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox8.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 8:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox9.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 9:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox10.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 10:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox11.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 11:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox12.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 12:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox13.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 13:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox14.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 14:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox15.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 15:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox16.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 16:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox17.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 17:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox18.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 18:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox19.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 19:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox20.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 20:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox21.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 21:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox22.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 22:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox23.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 23:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox24.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 24:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox25.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 25:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox26.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                }
+                if (flag != 0)
+                    pc_booking.Visible = true;
+                else
+                    ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Sorry all PS3 are booked');", true);
+            }
+
+        }
+        else if (XBOX.Checked)
+        {
+            int flag = 0;
+            string qry = "select * from vh_xbox1";
+            ad = new SqlDataAdapter(qry, con_string);
+            DataTable xbox = new DataTable();
+            ad.Fill(xbox);
+
+            DataRow xboxr;
+            for (int i = 0; i < 26; i++)
+            {
+                xboxr = xbox.Rows[i];
+                bool r1 = bool.Parse(xboxr["booked"].ToString());
+
+                switch (i)
+                {
+                    case 0:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox1.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 1:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox2.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 2:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox3.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 3:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox4.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 4:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox5.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 5:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox6.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 6:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox7.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 7:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox8.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 8:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox9.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 9:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox10.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 10:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox11.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 11:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox12.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 12:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox13.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 13:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox14.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 14:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox15.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 15:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox16.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 16:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox17.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 17:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox18.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 18:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox19.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 19:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox20.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 20:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox21.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 21:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox22.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 22:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox23.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 23:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox24.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 24:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox25.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                    case 25:
+                        if (r1)
+                        {
+                        }
+                        else
+                        {
+                            CheckBox26.Visible = true;
+                            flag = 1;
+                        }
+                        break;
+                }
+                if (flag != 0)
+                    pc_booking.Visible = true;
+                else
+                    ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Sorry all XBOX are booked');", true);
+            }
+        }
+    }
+
+    protected void morethan1_CheckedChanged(object sender, EventArgs e)
+    {
+        no_of_controllers.Visible = true;
+        hidecheckbox();
+        pc_booking.Visible = false;
+    }
+
+    protected void no_of_controllers_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        hidecheckbox();
+        deselect();
         if (PS4.Checked)
         {
             string qry = "select * from vh_ps4_1";
@@ -1522,16 +2512,6 @@ public partial class Booking : System.Web.UI.Page
         }
     }
 
-    protected void morethan1_CheckedChanged(object sender, EventArgs e)
-    {
-        no_of_controllers.Visible = true;
-    }
-
-    protected void no_of_controllers_SelectedIndexChanged(object sender, EventArgs e)
-    {
-
-    }
-
     protected void pc_booking_Click(object sender, EventArgs e)
     {
         string qry = "select * from vh_pc1";
@@ -1818,7 +2798,7 @@ public partial class Booking : System.Web.UI.Page
                         con.Close();
                     }
                 }
-                Response.Write("<script>alert('booking sucessful')</script>");
+                ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Booking Successful and email has been sent to your regiested email-id')", true);
             }
             else
                 Response.Write("<script>alert('please check to book')</script>");

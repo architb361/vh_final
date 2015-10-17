@@ -22,10 +22,12 @@ public partial class Games : System.Web.UI.Page
             login.Visible = false;
             logout.Visible = true;
             g_name.Text = Session["game_name"].ToString();
+            gammername = Session["game_name"].ToString();
             g_name.Visible = true;
             Welcome.Visible = true;
             gammerprofile.Visible = true;
             ForgotPassword.Visible = false;
+            ClientScript.RegisterStartupScript(GetType(), "Message", "myFunction(\'" + gammername + "\');", true);
         }
         else
         {
@@ -52,10 +54,11 @@ public partial class Games : System.Web.UI.Page
         //  try {
         string con_string = WebConfigurationManager.ConnectionStrings["virtualhighsConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(con_string);
-        string qry = "select * from vh_login where email_id=@id and password=@pwd";
+        string qry = "select * from vh_login where email_id=@id and password=@pwd and verified=@verified";
         SqlCommand cmd = new SqlCommand(qry, con);
         cmd.Parameters.AddWithValue("@id", emailid.Text.Trim());
         cmd.Parameters.AddWithValue("@pwd", password.Text.Trim());
+        cmd.Parameters.AddWithValue("@verified", "true");
         con.Open();
         SqlDataReader rd = cmd.ExecuteReader();
 
@@ -79,13 +82,15 @@ public partial class Games : System.Web.UI.Page
             Welcome.Visible = true;
             gammerprofile.Visible = true;
             ForgotPassword.Visible = false;
-            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Loged in successfully')", true);
-            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "none", "<script>$('#mymodal').modal('show');</script>", false);
+            con.Close();
+            ClientScript.RegisterStartupScript(GetType(), "Message", "myFunction(\'" + gammername + "\');", true);
+            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Loged in successfully'); window.location='Default.aspx';", true);
 
         }
         else
         {
             con.Close();
+            ClientScript.RegisterStartupScript(GetType(), "Message", "callAlert('Wrong credentials or Email-Id not verified'); window.location='Default.aspx';", true);
         }
         // }
         //  catch(Exception err)

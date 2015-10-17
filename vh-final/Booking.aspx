@@ -18,6 +18,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        function myFunction(g_name) {
+            document.getElementById("login-logout").innerHTML = g_name;
+        }
+    </script>
+    <script type="text/javascript">
+        function callAlert(msg) {
+            alert(msg);
+        }
+    </script>
 </head>
 
 <body>
@@ -71,9 +81,9 @@
 
                 <div class="col-xs-8">
                     <asp:RadioButton ID="PC" runat="server" AutoPostBack="True" GroupName="pc_or_consoles" OnCheckedChanged="PC_CheckedChanged" Text="PC's" />
-                    <asp:RadioButton ID="PS3" runat="server" AutoPostBack="True" GroupName="pc_or_consoles" OnCheckedChanged="PS3_CheckedChanged" Text="PS3" Visible="False" />
+                    <asp:RadioButton ID="PS3" runat="server" AutoPostBack="True" GroupName="pc_or_consoles" OnCheckedChanged="PS3_CheckedChanged" Text="PS3"  />
                     <asp:RadioButton ID="PS4" runat="server" AutoPostBack="True" GroupName="pc_or_consoles" OnCheckedChanged="PS4_CheckedChanged" Text="PS4" />
-                    <asp:RadioButton ID="XBOX" runat="server" AutoPostBack="True" GroupName="pc_or_consoles" OnCheckedChanged="XBOX_CheckedChanged" Text="XBOX" Visible="False" />
+                    <asp:RadioButton ID="XBOX" runat="server" AutoPostBack="True" GroupName="pc_or_consoles" OnCheckedChanged="XBOX_CheckedChanged" Text="XBOX" />
 
                     <br />
                     <asp:RadioButton ID="PC1" runat="server" AutoPostBack="True" GroupName="PCS" OnCheckedChanged="PC1_CheckedChanged" Text="1PC" Visible="False" />
