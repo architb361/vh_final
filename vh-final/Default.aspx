@@ -39,6 +39,12 @@
         }
     </script>
     <script type="text/javascript">
+        function signup(g_name) {
+            document.getElementById("sign-up").innerHTML = g_name;
+            document.getElementById("sign-up").href = "GammerProfile.aspx";
+        }
+    </script>
+    <script type="text/javascript">
         function mygamename(g_name) {
             document.getElementById("hi-gammer").innerHTML = 'hi ' + g_name;
             document.getElementById("hi-gammer").href = "GammerProfile.aspx";
@@ -70,7 +76,7 @@
                             <li><a href="Games.aspx">Games</a></li>
                             <li><a href="Gallery.aspx">Gallery</a></li>
                             <li><a href="Events.aspx">Events</a></li>
-                            <li><a href="SignUp.aspx">Sign Up</a></li>
+                            <li><a id="sign-up" href="SignUp.aspx">Sign Up</a></li>
                             <li><a id="login-logout" href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a></li>
                         </ul>
                     </div>
@@ -176,7 +182,7 @@
         <div class="center">
             <p>Book now to enjoy the whole new feel to gaming</p>
             <asp:Button ID="Book" CssClass="btn-lg btn-success" runat="server" Text="Book now" OnClick="Book_Click" />
-            <ajaxToolkit:HoverMenuExtender runat="server" DynamicServicePath="" BehaviorID="Book_HoverMenuExtender" TargetControlID="Book" ID="Book_HoverMenuExtender" PopupControlID="Panel1"></ajaxToolkit:HoverMenuExtender>
+            <ajaxToolkit:HoverMenuExtender runat="server" DynamicServicePath="" BehaviorID="Book_HoverMenuExtender" TargetControlID="Book" ID="Book_HoverMenuExtender" PopupControlID="Panel1" PopupPosition="Right" OffsetX="10"></ajaxToolkit:HoverMenuExtender>
             <asp:Panel ID="Panel1" CssClass="alert-info" runat="server" BorderStyle="Solid">
                     <b>Booking is not allowed between 11:30pm to 12:00</b>
                     <br />
@@ -319,7 +325,7 @@
         <footer>
             <div class="container">
                 <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
+                <p>&copy; 2015 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="#">Gallery</a> &middot; <a href="#">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
                 <p>All trademarks, logos, images and articles belong to their respective owners. All rights reserved.</p>
                 <p>Website developed by Archit Bhatnagar</p>
             </div>

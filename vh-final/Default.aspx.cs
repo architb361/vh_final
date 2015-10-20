@@ -26,7 +26,7 @@ public partial class _Default : System.Web.UI.Page
             Welcome.Visible = true;
             gammerprofile.Visible = true;
             ForgotPassword.Visible = false;
-            ClientScript.RegisterStartupScript(GetType(), "", "myFunction('Log-out'); myheader('Log-out'); mygamename(\'" + gammername + "\');", true);
+            ClientScript.RegisterStartupScript(GetType(), "", "myFunction('Log-out'); myheader('Log-out'); mygamename(\'" + gammername + "\'); signup('Profile');", true);
         }
         else
         {

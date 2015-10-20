@@ -642,7 +642,7 @@
         <footer>
             <div class="container">
                 <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2105 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="Gallery.aspx">Gallery</a> &middot; <a href="Events.aspx">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
+                <p>&copy; 2015 Virtual Highs &middot; <a href="Default.aspx">Home</a> &middot; <a href="#">Games</a> &middot; <a href="Gallery.aspx">Gallery</a> &middot; <a href="Events.aspx">Events</a> &middot; <a href="SignUp.aspx">Sign Up</a></p>
                 <p>All trademarks, logos, images and articles belong to their respective owners. All rights reserved.</p>
                 <p>Website developed by Archit Bhatnagar</p>
             </div>
